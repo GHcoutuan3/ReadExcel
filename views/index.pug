@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  if user
+    h1 #{title}
+    ul.list-group
+       each article, i in articles
+          li.list-group-item
+            a(href="/article/"+article._id)=article.title
+  else
+    h1 Welcome to the Read Excel application
+    h3 Please #[a(href='/users/register') Register] or #[a(href='/users/login') Login] to access content        
+  

@@ -1,0 +1,8 @@
+// https://github.com/expressjs/express-messages
+// We will create a custom template to displar messages
+
+.messages
+  each type in Object.keys(messages)
+    each message in messages[type]
+        div(class="alert alert-"+type) #{message}
+          

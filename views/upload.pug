@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 #{title}
+  if user
+    form(method='POST', action='/upload', enctype='multipart/form-data')
+      .form-group
+        input.form-control(type='file', name='selectedfile')
+    
+        input.btn.btb-block.btn-primary(type='submit', value='Upload File', name='submit')
+    

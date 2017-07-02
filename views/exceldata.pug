@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  if user
+    h1 #{title}
+      table
+        tr
+          td result.country[1]
+          td result.population[1]  
+    //-table
+      tbody(ng-repeat='i in phones')
+        tr
+          td {{i.name}}
+          td {{$index}}
+        tr(ng-repeat='e in i.details')
+          td {{$index}}
+          td {{e.foo}}
+          td {{e.bar}}
